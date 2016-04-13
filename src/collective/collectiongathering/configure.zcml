@@ -1,0 +1,30 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:five="http://namespaces.zope.org/five"
+    xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
+    xmlns:i18n="http://namespaces.zope.org/i18n"
+    i18n_domain="collective.collectiongathering">
+
+    <includeDependencies package="." />
+
+    <i18n:registerTranslations directory="locales" />
+
+    <include package=".browser" />
+
+
+    <genericsetup:registerProfile
+        name="default"
+        title="collective.collectiongathering"
+        directory="profiles/default"
+        description="Installs the collective.collectiongathering add-on."
+        provides="Products.GenericSetup.interfaces.EXTENSION"
+        />
+
+    <genericsetup:importStep
+        name="collective.collectiongathering-postInstall"
+        title="collective.collectiongathering post_install import step"
+        description="Post install import step from collective.collectiongathering"
+        handler=".setuphandlers.post_install">
+    </genericsetup:importStep>
+
+</configure>

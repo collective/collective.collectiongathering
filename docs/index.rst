@@ -1,0 +1,5 @@
+====================
+collective.collectiongathering
+====================
+
+User documentation

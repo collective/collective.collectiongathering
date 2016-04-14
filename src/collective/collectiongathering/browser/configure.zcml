@@ -17,4 +17,42 @@
         directory="static"
         />
 
+    <browser:pages
+      for="collective.collectiongathering.interfaces.ICollectionGathering"
+      class=".views.CollectionGatheringView"
+      layer="collective.collectiongathering.interfaces.ICollectiveCollectiongatheringLayer"
+      permission="zope2.View">
+
+      <browser:page
+          name="listing_view"
+          template="templates/listing.pt"
+          menu="plone_displayviews"
+          title="Standard view"
+          />
+      <browser:page
+          name="summary_view"
+          template="templates/listing_summary.pt"
+          menu="plone_displayviews"
+          title="Summary view"
+          />
+      <browser:page
+          name="tabular_view"
+          template="templates/listing_tabular.pt"
+          menu="plone_displayviews"
+          title="Tabular view"
+          />
+      <browser:page
+          name="full_view"
+          template="templates/full_view.pt"
+          menu="plone_displayviews"
+          title="All content"
+          />
+      <browser:page
+          name="album_view"
+          template="templates/listing_album.pt"
+          menu="plone_displayviews"
+          title="Album view"
+          />
+    </browser:pages>
+
 </configure>

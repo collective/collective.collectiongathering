@@ -38,7 +38,7 @@ class CollectionGathering(Container):
 
         # Order the results and limit it
         if sort_on:
-            results.sort(key=lambda o: getattr(o, sort_on), reverse=self.sort_reversed)
+            results.sort(key=lambda o: getattr(o, sort_on, None), reverse=self.sort_reversed)
         if limit:
             results = results[:limit]
 

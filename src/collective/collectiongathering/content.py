@@ -1,5 +1,5 @@
 from plone.app.contenttypes.interfaces import ICollection
-from plone.batching.batch import BaseBatch
+from plone.batching.batch import Batch
 from plone.dexterity.content import Container
 from zope.interface import implementer
 
@@ -27,7 +27,7 @@ class CollectionGathering(Container):
         results = []
         for collection in collections:
             collection_results = collection.results(
-                batch=batch, b_start=b_start, b_size=b_size, sort_on=sort_on,
+                batch=False, b_start=0, b_size=limit, sort_on=sort_on,
                 limit=limit, brains=brains, custom_query=custom_query
             )
             for result in collection_results:
@@ -38,10 +38,10 @@ class CollectionGathering(Container):
 
         # Order the results and limit it
         if sort_on:
-            results = sorted(results, key=lambda o: getattr(o, sort_on), reverse=self.sort_reversed)
+            results.sort(key=lambda o: getattr(o, sort_on), reverse=self.sort_reversed)
         if limit:
             results = results[:limit]
 
         # Batch the results
-        results = BaseBatch(results, size=b_size, start=b_start)
+        results = Batch(results, size=b_size, start=b_start)
         return results

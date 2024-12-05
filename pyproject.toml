@@ -132,7 +132,7 @@ ignore = [
 
 
 [tool.towncrier]
-issue_format = "`Issue #{issue} <https://github.com/collective/zestreleaser.towncrier/issues/{issue}>`_"
+issue_format = "`Issue #{issue} <https://github.com/collective/collective.collectiongathering/issues/{issue}>`_"
 filename = "CHANGES.rst"
 directory = "news/"
 title_format = "{version} ({project_date})"

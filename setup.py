@@ -63,7 +63,6 @@ setup(
             "plone.browserlayer",
             "plone.dexterity",
             "plone.testing",
-            "robotsuite",
             "unittest2",
             "zope.component",
         ],

@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-0.1 (unreleased)
+1.0 (2024-12-05)
 ----------------
 
 - Initial release.

@@ -17,7 +17,7 @@ long_description = (
 
 setup(
     name="collective.collectiongathering",
-    version="0.1",
+    version="1.0",
     description="A Dexterity content type which can gather multiple collection into one.",
     long_description=long_description,
     # Get more from http://pypi.python.org/pypi?%3Aaction=list_classifiers

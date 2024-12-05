@@ -1,3 +1,20 @@
+1.1 (2024-12-05)
+----------------
+
+New features:
+
+
+- Add feed support
+  [erral] (`Issue #2 <https://github.com/collective/zestreleaser.towncrier/issues/2>`_)
+
+
+Internal changes:
+
+
+- Add tests
+  [erral] (`Issue #2 <https://github.com/collective/zestreleaser.towncrier/issues/2>`_)
+
+
 Changelog
 =========
 

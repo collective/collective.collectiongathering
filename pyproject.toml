@@ -154,3 +154,8 @@ showcontent = true
 directory = "bugfix"
 name = "Bug fixes:"
 showcontent = true
+
+[[tool.towncrier.type]]
+directory = "chore"
+name = "Internal changes:"
+showcontent = true

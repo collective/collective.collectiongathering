@@ -13,6 +13,9 @@ class CollectiveCollectiongatheringLayer(PloneSandboxLayer):
     defaultBases = (PLONE_FIXTURE,)
 
     def setUpZope(self, app, configurationContext):
+        import plone.app.dexterity
+
+        self.loadZCML(package=plone.app.dexterity)
         self.loadZCML(package=collective.collectiongathering)
 
     def setUpPloneSite(self, portal):

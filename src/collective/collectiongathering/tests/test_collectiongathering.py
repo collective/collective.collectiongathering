@@ -125,3 +125,21 @@ class CollectionGathersOtherCollections(unittest.TestCase):
 
         results = self.collection_gather.results(batch=False)
         self.assertEqual(len(results), 4)
+
+    def test_gathering_sorting(self):
+        self.collection_gather.sort_on = 'title'
+
+        results = self.collection_gather.results(batch=False)
+        self.assertEqual(len(results), 4)
+
+        sorted_items = [item.id for item in results]
+
+        self.assertEqual(
+            sorted_items,
+            [
+                "event1",
+                "event2",
+                "news1",
+                "news2",
+            ],
+        )

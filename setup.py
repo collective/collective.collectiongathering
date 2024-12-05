@@ -49,6 +49,7 @@ setup(
         "Acquisition",
         "plone.app.contenttypes",
         "plone.app.dexterity",
+        "plone.base"
         "plone.batching",
         "plone.dexterity",
         "Products.CMFPlone",

@@ -9,7 +9,7 @@ from plone.dexterity.interfaces import IDexterityFTI
 from zope.component import createObject
 from zope.component import queryUtility
 
-import unittest2 as unittest
+import unittest
 
 
 class CollectionGatheringIntegrationTest(unittest.TestCase):

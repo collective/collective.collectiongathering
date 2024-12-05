@@ -67,7 +67,6 @@ setup(
             "plone.browserlayer",
             "plone.dexterity",
             "plone.testing",
-            "unittest2",
             "zope.component",
         ],
     },

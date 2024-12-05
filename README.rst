@@ -6,13 +6,10 @@
 collective.collectiongathering
 ==============================================================================
 
-A Dexterity content type which can gather multiple collection into one
+A Dexterity content type which can gather multiple collection into one.
 
-
-Documentation
--------------
-
-Full documentation for end users can be found in the "docs" folder
+To do so create a `CollectionGathering` object in your Plone site, and add inside it the collections you want
+to gather in the main one, and configure each one independently.
 
 
 Translations

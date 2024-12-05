@@ -62,7 +62,7 @@ setup(
         "test": [
             "plone.api",
             "plone.app.contenttypes",
-            "plone.app.robotframework"
+            "plone.app.robotframework",
             "plone.app.testing",
             "plone.browserlayer",
             "plone.dexterity",

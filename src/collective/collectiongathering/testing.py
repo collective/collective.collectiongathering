@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 from plone.app.contenttypes.testing import PLONE_APP_CONTENTTYPES_FIXTURE
 from plone.app.robotframework.testing import REMOTE_LIBRARY_BUNDLE_FIXTURE
 from plone.app.testing import applyProfile
@@ -18,7 +17,7 @@ class CollectiveCollectiongatheringLayer(PloneSandboxLayer):
         self.loadZCML(package=collective.collectiongathering)
 
     def setUpPloneSite(self, portal):
-        applyProfile(portal, 'collective.collectiongathering:default')
+        applyProfile(portal, "collective.collectiongathering:default")
 
 
 COLLECTIVE_COLLECTIONGATHERING_FIXTURE = CollectiveCollectiongatheringLayer()
@@ -26,13 +25,13 @@ COLLECTIVE_COLLECTIONGATHERING_FIXTURE = CollectiveCollectiongatheringLayer()
 
 COLLECTIVE_COLLECTIONGATHERING_INTEGRATION_TESTING = IntegrationTesting(
     bases=(COLLECTIVE_COLLECTIONGATHERING_FIXTURE,),
-    name='CollectiveCollectiongatheringLayer:IntegrationTesting'
+    name="CollectiveCollectiongatheringLayer:IntegrationTesting",
 )
 
 
 COLLECTIVE_COLLECTIONGATHERING_FUNCTIONAL_TESTING = FunctionalTesting(
     bases=(COLLECTIVE_COLLECTIONGATHERING_FIXTURE,),
-    name='CollectiveCollectiongatheringLayer:FunctionalTesting'
+    name="CollectiveCollectiongatheringLayer:FunctionalTesting",
 )
 
 
@@ -40,7 +39,7 @@ COLLECTIVE_COLLECTIONGATHERING_ACCEPTANCE_TESTING = FunctionalTesting(
     bases=(
         COLLECTIVE_COLLECTIONGATHERING_FIXTURE,
         REMOTE_LIBRARY_BUNDLE_FIXTURE,
-        z2.ZSERVER_FIXTURE
+        z2.ZSERVER_FIXTURE,
     ),
-    name='CollectiveCollectiongatheringLayer:AcceptanceTesting'
+    name="CollectiveCollectiongatheringLayer:AcceptanceTesting",
 )

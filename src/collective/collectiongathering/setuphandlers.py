@@ -1,11 +1,9 @@
-# -*- coding: utf-8 -*-
-
 from Products.CMFPlone.interfaces import INonInstallable
 from zope.interface import implementer
 
 
 @implementer(INonInstallable)
-class HiddenProfiles(object):
+class HiddenProfiles:
 
     def getNonInstallableProfiles(self):
         """Hide uninstall profile from site-creation and quickinstaller."""
@@ -22,6 +20,7 @@ def post_install(context):
     """Post install script"""
     # Do something during the installation of this package
 
+
 def post_uninstall(context):
-    """ Post uninstall script """
+    """Post uninstall script"""
     # Do something during the installation of this package

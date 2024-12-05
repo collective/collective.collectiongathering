@@ -20,6 +20,7 @@ This product has been translated into
 - English
 
 
+
 Installation
 ------------
 
@@ -48,3 +49,4 @@ License
 -------
 
 The project is licensed under the GPLv2.
+

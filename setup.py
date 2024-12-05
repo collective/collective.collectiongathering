@@ -1,18 +1,18 @@
-# -*- coding: utf-8 -*-
 """Installer for the collective.collectiongathering package."""
 
-from setuptools import find_packages, setup
+from setuptools import find_packages
+from setuptools import setup
+
 
 long_description = (
-    open('README.rst').read()
-    + '\n' +
-    'Contributors\n'
-    '============\n'
-    + '\n' +
-    open('CONTRIBUTORS.rst').read()
-    + '\n' +
-    open('CHANGES.rst').read()
-    + '\n')
+    open("README.rst").read() + "\n" + "Contributors\n"
+    "============\n"
+    + "\n"
+    + open("CONTRIBUTORS.rst").read()
+    + "\n"
+    + open("CHANGES.rst").read()
+    + "\n"
+)
 
 
 setup(
@@ -52,7 +52,7 @@ setup(
         "zope.i18nmessageid",
         "zope.interface",
         "zope.publisher",
-        "zope.schema"
+        "zope.schema",
     ],
     extras_require={
         "test": [
@@ -65,7 +65,7 @@ setup(
             "plone.testing",
             "robotsuite",
             "unittest2",
-            "zope.component"
+            "zope.component",
         ],
     },
     entry_points="""

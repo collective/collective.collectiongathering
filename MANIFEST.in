@@ -1,3 +1,5 @@
 graft src/collective
 graft docs/
 include *.cfg *.rst *.in
+include .coveragerc
+recursive-exclude src *pyc

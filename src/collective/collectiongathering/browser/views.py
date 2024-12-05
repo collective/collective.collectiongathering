@@ -1,7 +1,6 @@
 from Acquisition import aq_inner
-from plone.app.contenttypes.browser.collection import CollectionView
-
 from collective.collectiongathering.interfaces import ICollectionGathering
+from plone.app.contenttypes.browser.collection import CollectionView
 
 
 class CollectionGatheringView(CollectionView):

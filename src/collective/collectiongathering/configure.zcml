@@ -3,26 +3,35 @@
     xmlns:five="http://namespaces.zope.org/five"
     xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
     xmlns:i18n="http://namespaces.zope.org/i18n"
-    i18n_domain="collective.collectiongathering">
+    i18n_domain="collective.collectiongathering"
+    >
 
-    <i18n:registerTranslations directory="locales" />
+  <i18n:registerTranslations directory="locales" />
 
-    <include package=".browser" />
+  <include package=".browser" />
 
 
-    <genericsetup:registerProfile
-        name="default"
-        title="collective.collectiongathering"
-        directory="profiles/default"
-        description="Installs the collective.collectiongathering add-on."
-        provides="Products.GenericSetup.interfaces.EXTENSION"
-        />
+  <genericsetup:registerProfile
+      name="default"
+      title="collective.collectiongathering"
+      description="Installs the collective.collectiongathering add-on."
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+      directory="profiles/default"
+      post_handler=".setuphandlers.post_install"
+      />
 
-    <genericsetup:importStep
-        name="collective.collectiongathering-postInstall"
-        title="collective.collectiongathering post_install import step"
-        description="Post install import step from collective.collectiongathering"
-        handler=".setuphandlers.post_install">
-    </genericsetup:importStep>
+  <genericsetup:registerProfile
+      name="uninstall"
+      title="collective.collectiongathering"
+      description="Uninstall the collective.collectiongathering add-on."
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+      directory="profiles/uninstall"
+      post_handler=".setuphandlers.post_uninstall"
+      />
+
+  <utility
+      factory=".setuphandlers.HiddenProfiles"
+      name="collective.collectiongathering-hiddenprofiles"
+      />
 
 </configure>

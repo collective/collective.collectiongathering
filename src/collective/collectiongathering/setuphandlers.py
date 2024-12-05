@@ -1,12 +1,27 @@
 # -*- coding: utf-8 -*-
 
+from Products.CMFPlone.interfaces import INonInstallable
+from zope.interface import implementer
 
-def isNotCurrentProfile(context):
-    return context.readDataFile('collectivecollectiongathering_marker.txt') is None
+
+@implementer(INonInstallable)
+class HiddenProfiles(object):
+
+    def getNonInstallableProfiles(self):
+        """Hide uninstall profile from site-creation and quickinstaller."""
+        return [
+            "collective.collectiongathering:uninstall",
+        ]
+
+    def getNonInstallableProducts(self):
+        """Hide the upgrades package from site-creation and quickinstaller."""
+        return ["collective.collectiongathering.upgrades"]
 
 
 def post_install(context):
     """Post install script"""
-    if isNotCurrentProfile(context):
-        return
+    # Do something during the installation of this package
+
+def post_uninstall(context):
+    """ Post uninstall script """
     # Do something during the installation of this package

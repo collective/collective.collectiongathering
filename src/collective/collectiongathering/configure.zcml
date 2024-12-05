@@ -34,4 +34,10 @@
       name="collective.collectiongathering-hiddenprofiles"
       />
 
+  <!-- Syndication support -->
+  <adapter
+      factory="Products.CMFPlone.browser.syndication.adapters.CollectionFeed"
+      for=".interfaces.ICollectionGathering"
+      />
+
 </configure>

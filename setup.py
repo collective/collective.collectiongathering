@@ -1,9 +1,7 @@
 # -*- coding: utf-8 -*-
 """Installer for the collective.collectiongathering package."""
 
-from setuptools import find_packages
-from setuptools import setup
-
+from setuptools import find_packages, setup
 
 long_description = (
     open('README.rst').read()
@@ -44,14 +42,30 @@ setup(
     python_requires=">=3.7",
     install_requires=[
         "setuptools",
+        "Acquisition",
+        "plone.app.contenttypes",
         "plone.app.dexterity",
+        "plone.batching",
+        "plone.dexterity",
+        "Products.CMFPlone",
+        "Products.GenericSetup",
+        "zope.i18nmessageid",
+        "zope.interface",
+        "zope.publisher",
+        "zope.schema"
     ],
     extras_require={
         "test": [
             "plone.api",
-            "plone.app.testing",
             "plone.app.contenttypes",
             "plone.app.robotframework[debug]",
+            "plone.app.testing",
+            "plone.browserlayer",
+            "plone.dexterity",
+            "plone.testing",
+            "robotsuite",
+            "unittest2",
+            "zope.component"
         ],
     },
     entry_points="""

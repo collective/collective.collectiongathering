@@ -2,7 +2,6 @@ from collective.collectiongathering.interfaces import ICollectionGathering
 from collective.collectiongathering.testing import (  # noqa
     COLLECTIVE_COLLECTIONGATHERING_INTEGRATION_TESTING,
 )
-from plone import api
 from plone.app.testing import setRoles
 from plone.app.testing import TEST_USER_ID
 from plone.dexterity.interfaces import IDexterityFTI
@@ -20,7 +19,6 @@ class CollectionGatheringIntegrationTest(unittest.TestCase):
         """Custom shared utility setup for tests."""
         self.portal = self.layer["portal"]
         setRoles(self.portal, TEST_USER_ID, ["Manager"])
-        self.installer = api.portal.get_tool("portal_quickinstaller")
 
     def test_schema(self):
         fti = queryUtility(IDexterityFTI, name="CollectionGathering")

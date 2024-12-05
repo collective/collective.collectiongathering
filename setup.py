@@ -42,13 +42,12 @@ setup(
     include_package_data=True,
     zip_safe=False,
     install_requires=[
-        "plone.api",
         "setuptools",
-        "z3c.jbot",
         "plone.app.dexterity",
     ],
     extras_require={
         "test": [
+            "plone.api",
             "plone.app.testing",
             "plone.app.contenttypes",
             "plone.app.robotframework[debug]",

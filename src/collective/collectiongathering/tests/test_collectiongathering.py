@@ -2,12 +2,13 @@ from collective.collectiongathering.interfaces import ICollectionGathering
 from collective.collectiongathering.testing import (  # noqa
     COLLECTIVE_COLLECTIONGATHERING_INTEGRATION_TESTING,
 )
+from plone import api
 from plone.app.testing import setRoles
 from plone.app.testing import TEST_USER_ID
 from plone.dexterity.interfaces import IDexterityFTI
 from zope.component import createObject
 from zope.component import queryUtility
-from plone import api
+
 import unittest
 
 
@@ -127,7 +128,7 @@ class CollectionGathersOtherCollections(unittest.TestCase):
         self.assertEqual(len(results), 4)
 
     def test_gathering_sorting(self):
-        self.collection_gather.sort_on = 'title'
+        self.collection_gather.sort_on = "title"
 
         results = self.collection_gather.results(batch=False)
         self.assertEqual(len(results), 4)

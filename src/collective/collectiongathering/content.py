@@ -63,6 +63,4 @@ class CollectionGathering(Container):
         return results
 
     def queryCatalog(self, batch=True, b_start=0, b_size=30, sort_on=None):
-        return self.results(
-            batch, b_start, b_size, sort_on=sort_on
-        )
+        return self.results(batch, b_start, b_size, sort_on=sort_on)
